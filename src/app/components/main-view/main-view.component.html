@@ -1,0 +1,20 @@
+<div class="main-view-container">
+    <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+    <mat-list role="list" *ngFor="let profile of profiles$ | async">
+        <div>
+            <mat-card>
+                <div class="row row-card">
+                    <div class="col col-photo">
+                        <img [src]="profile.imageURL">
+                    </div>
+                    <div class="col">
+                        <h3>{{ profile.name }} {{profile.last_name}}</h3>
+                        <p>{{profile.presentation}}</p>
+                        <button mat-raised-button color="primary" (click)="goToProfile(profile.id)">view Profile</button>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </mat-list>
+</div>
+  

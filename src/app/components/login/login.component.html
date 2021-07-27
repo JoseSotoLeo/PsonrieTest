@@ -1,0 +1,44 @@
+<div class="login-container">
+    <mat-card>
+        <div class="row"><h3>Login</h3></div>
+        <div class="row">
+            <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="login(user)">
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>User</mat-label>
+                            <input matInput 
+                            [(ngModel)]="user.username"
+                            formControlName="username"
+                            type="text"
+                            class="form-control"
+                            placeholder="User" 
+                            >
+                          </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>password</mat-label>
+                            <input matInput 
+                            [(ngModel)]="user.password"
+                            formControlName="password"
+                            type="password"
+                            class="form-control"
+                            placeholder="passowrd" 
+                            >
+                          </mat-form-field>
+                    </div>
+                </div>
+                
+                  
+
+                  <div class="row">
+                    <button mat-raised-button 
+                    color="primary"
+                    [disabled]="loginForm.invalid"
+                    >Login</button>
+                  </div>
+            </form>
+        </div>
+    </mat-card>
+</div>

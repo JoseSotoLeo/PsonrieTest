@@ -1,0 +1,28 @@
+.profile-container{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 2rem;
+    
+}
+
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.imageRow{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rate {
+    padding-top: 1rem;
+    padding-left: 50%;
+}
+
+.chips{
+    display: flex;
+    padding-bottom: 1rem;
+}

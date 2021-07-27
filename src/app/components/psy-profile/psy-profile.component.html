@@ -1,0 +1,19 @@
+<div class="profile-container">
+    <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+    <div class="info-container" *ngIf="profileInfo$ | async as info">
+        
+        <div class="row">
+            <h2> 
+                {{ info.name }} {{ info.last_name }}
+            </h2>
+        </div>
+        <div class="row imageRow">
+            <img [src]="info.imageURL">
+            <div class="rate"><h3>{{ info.rate }}</h3></div>
+        </div>
+        <mat-chip-list class="row chips">
+            <mat-chip *ngFor="let tag of info.specialities">{{tag}}</mat-chip>
+        </mat-chip-list>
+        <div class="row">{{info.presentation}}</div>
+    </div>
+</div>

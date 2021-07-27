@@ -1,0 +1,7 @@
+.row-card{
+    display: flex;
+}
+
+.col-photo{
+    padding-right: 5rem;
+}
